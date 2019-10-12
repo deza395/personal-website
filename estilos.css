@@ -1,0 +1,271 @@
+*{
+  box-sizing: border-box;
+}
+body {
+  margin:0;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'EB Garamond', serif;
+}
+h1,h2,h3{
+text-align:center;
+font-family: 'Montserrat', sans-serif;
+
+}
+
+.main{
+  margin: auto;
+}
+  /* con tex decoration none le quito esl subrayado del link */
+a{
+  text-decoration:none;
+  margin-right:20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size:15px;
+  text-transform:uppercase;
+  color: #00B2B2;
+}
+a:hover{
+color: #050607;
+}
+
+/* que me hace displey flex? me los pone uno al lado del otro
+con list-style none le saque los puntos que vienen por defecto
+con justify-content:flex-end lo que le digo es que ponfa en contenido al final de la linea  */
+ ul {
+  display:flex;
+  list-style:none;
+  justify-content:flex-end;
+  background: white;
+  margin:0;
+  padding:20px;
+}
+
+header{
+  background:
+  linear-gradient(rgba(0, 0, 0,.9),rgba(124, 120, 119,.2)) ,url("img/ideas.jpg");
+  height:100vh;
+  background-size:cover;
+
+}
+
+#titulo{
+  display:flex;
+  justify-content:center;
+
+}
+.contendor-titulo{
+     margin:18vh 0;
+}
+h1{
+
+  font-size:60px;
+  color:#fff;
+
+}
+h2{
+
+  font-size:25px;
+  color:#fff;
+
+}
+/* sobre mi */
+.profile h3{
+font-size:20px;
+/* font-weight: 600; */
+border: solid 1px #00B2B2;
+border-radius: 5px;
+text-align: center;
+padding: 15px 0;
+}
+#perfil{
+ margin:30px 10px;
+ display:flex;
+ justify-content:space-around;
+}
+.profile, .image{
+   width: 50%;
+  margin:20px 20px;
+}
+ .image{
+/* border-radius:180%; */
+display:flex;
+justify-content:center;
+}
+.image img{
+width:70%;
+
+
+}
+
+.profile p{
+  font-family: 'Montserrat', sans-serif;
+  font-size:18px;
+  padding: 20px 0;
+}
+/* servicios */
+#habilidades{
+  box-shadow: 1px 1px 14px #ccc;
+  padding-top: 20px
+}
+.contenedor-servicios{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+.servicio{
+  width: 28%;
+  padding: 15px 30px 38px 30px;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.contenedor h3{
+  font-size: 20px;
+  text-align: center;
+}
+.servicio p{
+  margin: auto;
+  height: 200px;
+  color: #fff;
+  font-family: 'EB Garamond', serif;
+
+
+}
+.servicio h4{
+  font-size: 15px;
+  text-align: center;
+  color: #fff;
+  font-family: 'EB Garamond', serif;
+}
+ .contenedor-servicios .verde{
+  background: linear-gradient(to top,#00b2b2,#077878);
+   box-shadow: 0 12px 30px 0 rgba(80,85,223,.37);
+}
+.contenedor-servicios .negro{
+  background: linear-gradient(to top,#34495E ,#273746 );
+  box-shadow: 0 12px 30px 0 rgba(86,163,222,.20);
+}
+.ondas{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.icono{
+  float:right;
+}
+/* seccion contacto */
+#contacto form{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 77%;
+}
+input[type="text"], input[type="email"]{
+  width: 48%;
+  margin-bottom: 15px;
+  padding: 18px 0;
+  border:0;
+  border-bottom: 1px solid #5cb8ff;
+  font-size: 17px;
+}
+
+textarea{
+  padding:18px 0;
+  border:0;
+  border-bottom: 1px solid #5cb8ff;
+  margin-bottom: 40px;
+  width: 100%;
+  font-size: 17px;
+}
+input[type="submit"]{
+  font-size: 14px;
+  color:#fff;
+  background: #5cb8ff;
+  padding: 14px 24px;
+  display: inline-block;
+  width: 177px;
+  margin: auto;
+}
+.contacto-info{
+  display:flex;
+  justify-content: space-around;
+  margin-top:40px ;
+}
+.contacto-info img{
+  width: 30px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+/* inicio del footer */
+footer{
+  background: green;
+  padding: 40px 0;
+  text-align: center;
+  margin-top: 40px;
+  }
+  footer .contenedor{
+display: flex;
+justify-content: center;
+flex-direction: column;
+  }
+  footer img{
+    margin:0 40px;
+    transform: rotate(0);
+    transition: 0.4s
+  }
+footer img:hover{
+  transform: rotate(360deg);
+  transition: 0.4s;
+}
+#whatsapp{
+  position: fixed;
+  top:80%;
+  right: 2%;
+  z-index: 100;
+}
+#perfil, #habilidades, #contacto,#portfolio {
+  padding: 50px 0;
+}
+
+@media (max-width: 800px){
+  header {
+    height: 80vh;
+  }
+  .menu ul {
+    display: none;
+  }
+  #perfil{
+    flex-direction: column-reverse;
+
+  }
+  .profile{
+    width:85%;
+    margin: auto;
+
+
+  }
+  .image {
+    width: 80%;
+    margin:auto;
+    margin-bottom: 30px;
+    display: none;
+  }
+  .contenedor-servicios{
+    flex-direction: column;
+  }
+  .servicio{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+}
+@media (min-width:800px) and (max-width:1000px){
+  header {
+    height: 70vh;
+  }
+  .image{
+    
+  }
+}
